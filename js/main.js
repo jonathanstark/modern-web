@@ -20,9 +20,18 @@ if($) {
     slideshow.append('<div class="x-of-y">X of Y</div>');
     slideshow.append('<div class="controls"><a href="#" class="prev">Prev</a><a href="#" class="next">Next</a></div>');
 
-    // Size the slides based on the parent width
-    slideshow.find('.slide').css({
-        width: slideshow.width()
-    })
+    // Init sizes
+    calcSizes();
+
+    // Recalc sizes on window resize
+    $(window).on('resize', calcSizes); // Might want to debounce/throttle this
+
+    function calcSizes() {
+        // Size the slides based on the parent width
+        var slideshow = $('.slideshow');
+        slideshow.find('.slide').css({
+            width: slideshow.width()
+        });
+    }
 
 }
