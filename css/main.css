@@ -1,0 +1,68 @@
+/* TEXT/FONTS */
+
+body {
+    font-family: Georgia, Times, serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+.content > p:first-child {
+    font-size: 150%;
+}
+
+/* COLORS */
+
+::selection {
+    background-color: darkgreen;
+    color: white;
+}
+html {
+    background-color: #fefefe;
+}
+a, a:link, a:visited, a:hover, a:active {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: darkgreen;
+    text-decoration: none;
+}
+a:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+/* LAYOUT */
+
+a {
+    display: inline-block;
+}
+img {
+    border: none;
+    width: 100%;
+}
+ul.nav {
+    margin: 0;
+    padding: 0;
+}
+ul.nav li {
+    display: inline-block;
+}
+.footer p {
+    margin: 3em auto;
+}
+
+/* SLIDESHOWS */
+
+.no-js .slideshow ul {
+    margin: 0;
+    padding: 0;
+}
+.no-js .slideshow .slide {
+    border: 1px solid silver;
+    margin-bottom: 2em;
+    padding: 0 1em;
+}
+.no-js .slideshow .slide img {
+    display: block;
+}
+
+
+
