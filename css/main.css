@@ -92,6 +92,19 @@ ul.nav li {
     white-space: normal;
 }
 
+/* MEDIA QUERIES */
 
+@media screen and (min-width: 50em) {
+    .js .slideshow {
+        border: 1px solid silver;
+        float: right;
+        margin-left: 1em;
+        max-width: 24em;
+        padding:1em;
+    }
+    .js .slideshow .slide {
+        margin-bottom: 0;
+    }
+}
 
 
