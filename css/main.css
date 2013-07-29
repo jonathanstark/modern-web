@@ -91,11 +91,8 @@ ul.nav li {
 .js .slideshow .slide p {
     white-space: normal;
 }
-
-/* MEDIA QUERIES */
-
 @media screen and (min-width: 50em) {
-    .js .slideshow {
+    .js .slideshow.no-slideshowify {
         background-color: lightgray;
         border: 1px solid silver;
         float: right;
@@ -103,19 +100,19 @@ ul.nav li {
         max-width: 24em;
         padding:1em;
     }
-    .js .slideshow .slide {
+    .js .slideshow.no-slideshowify .slide {
         background-color: white;
         margin-bottom: 0;
     }
 }
 
-/* SLIDESHOWIFIED */
+/* SLIDESHOWIFY */
 
-.js .slideshowified {
+.js .slideshowify {
     position: relative;
     overflow-x: hidden;
 }
-.js .slideshowified .x-of-y {
+.js .slideshowify .x-of-y {
     background-color: black;
     color: white;
     font-family: sans-serif;
@@ -125,7 +122,7 @@ ul.nav li {
     top: 0;
     width: 100%;
 }
-.js .slideshowified .controls {
+.js .slideshowify .controls {
     background-color: black;
     bottom: 0;
     font-family: sans-serif;
@@ -134,15 +131,23 @@ ul.nav li {
     text-align: center;
     width: 100%;
 }
-.js .slideshowified .controls a {
+.js .slideshowify .controls a {
     color: white;
     display: inline-block;
     padding: .5em;
     position: absolute;
 }
-.js .slideshowified .controls .next {
+.js .slideshowify .controls .next {
     right: 0;
 }
-.js .slideshowified .controls .prev {
+.js .slideshowify .controls .prev {
     left: 0;
 }
+@media screen and (min-width: 50em) {
+    .js .slideshow.slideshowify {
+        float: right;
+        margin-left: 1em;
+        max-width: 24em;
+    }
+}
+

@@ -10,8 +10,11 @@ if($) {
     // Cache a reference to the wrapper
     var slideshow = $('.slideshow');
 
-    // Add a css hook for fancy styles
-    slideshow.addClass('slideshowified');
+    // Remove css hook for non-fancy styles
+    slideshow.removeClass('no-slideshowify');
+
+    // Add css hook for fancy styles
+    slideshow.addClass('slideshowify');
 
     // Append some UI elements
     slideshow.append('<div class="x-of-y">X of Y</div>');
