@@ -69,9 +69,11 @@ ul.nav li {
 /* JS SLIDESHOWS */
 
 .js .slideshow {
+    -webkit-overflow-scrolling: touch;
     overflow-x: scroll;
 }
 .js .slideshow ul {
+    -webkit-transform: translateZ(0px);
     margin: 0;
     padding: 0;
     white-space: nowrap;
@@ -81,7 +83,7 @@ ul.nav li {
     display: inline-block;
     margin: 0 1em 2em 0;
     padding: 1em 1em 0 1em;
-    width: 300px;
+    width: 20em;
 }
 .js .slideshow .slide img {
     display: block;
