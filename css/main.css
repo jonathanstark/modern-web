@@ -30,7 +30,9 @@ a:hover {
 }
 
 /* LAYOUT */
-
+* {
+    box-sizing: border-box;
+}
 a {
     display: inline-block;
 }
@@ -49,7 +51,7 @@ ul.nav li {
     margin: 3em auto;
 }
 
-/* SLIDESHOWS */
+/* NO-JS SLIDESHOWS */
 
 .no-js .slideshow ul {
     margin: 0;
@@ -63,6 +65,31 @@ ul.nav li {
 .no-js .slideshow .slide img {
     display: block;
 }
+
+/* JS SLIDESHOWS */
+
+.js .slideshow {
+    overflow-x: scroll;
+}
+.js .slideshow ul {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.js .slideshow .slide {
+    border: 1px solid silver;
+    display: inline-block;
+    margin: 0 1em 2em 0;
+    padding: 1em 1em 0 1em;
+    width: 300px;
+}
+.js .slideshow .slide img {
+    display: block;
+}
+.js .slideshow .slide p {
+    white-space: normal;
+}
+
 
 
 
