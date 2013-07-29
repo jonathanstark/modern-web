@@ -92,7 +92,7 @@ ul.nav li {
     white-space: normal;
 }
 @media screen and (min-width: 50em) {
-    .js .slideshow.no-slideshowify {
+    .js .slideshow.no-fancy {
         background-color: lightgray;
         border: 1px solid silver;
         float: right;
@@ -100,19 +100,19 @@ ul.nav li {
         max-width: 24em;
         padding:1em;
     }
-    .js .slideshow.no-slideshowify .slide {
+    .js .slideshow.no-fancy .slide {
         background-color: white;
         margin-bottom: 0;
     }
 }
 
-/* SLIDESHOWIFY */
+/* fancy */
 
-.js .slideshowify {
+.js .fancy {
     position: relative;
     overflow-x: hidden;
 }
-.js .slideshowify .x-of-y {
+.js .fancy .x-of-y {
     background-color: black;
     color: white;
     font-family: sans-serif;
@@ -122,7 +122,7 @@ ul.nav li {
     top: 0;
     width: 100%;
 }
-.js .slideshowify .controls {
+.js .fancy .controls {
     background-color: black;
     bottom: 0;
     font-family: sans-serif;
@@ -131,20 +131,20 @@ ul.nav li {
     text-align: center;
     width: 100%;
 }
-.js .slideshowify .controls a {
+.js .fancy .controls a {
     color: white;
     display: inline-block;
     padding: .5em;
     position: absolute;
 }
-.js .slideshowify .controls .next {
+.js .fancy .controls .next {
     right: 0;
 }
-.js .slideshowify .controls .prev {
+.js .fancy .controls .prev {
     left: 0;
 }
 @media screen and (min-width: 50em) {
-    .js .slideshow.slideshowify {
+    .js .slideshow.fancy {
         float: right;
         margin-left: 1em;
         max-width: 24em;
