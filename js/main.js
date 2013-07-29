@@ -11,6 +11,10 @@ if($) {
     // Cache a reference to the wrapper
     var slideshow = $('.slideshow');
 
+    // Init some vars
+    var curr = 0; // slides are zero indexed
+    var count = slideshow.find('.slide').length;
+
     // Remove css hook for no-fancy styles
     slideshow.removeClass('no-fancy');
 
@@ -24,8 +28,14 @@ if($) {
     // Init sizes
     calcSizes();
 
+    // Init header
+    updateHeader();
+
     // Recalc sizes on window resize
     $(window).on('resize', calcSizes); // Might want to debounce/throttle this
+
+    // Listen for events in the slideshow
+    $(slideshow).on('click', handleClick);
 
     function calcSizes() {
         // Size the slides based on the parent width
@@ -33,6 +43,42 @@ if($) {
         slideshow.find('.slide').css({
             width: slideshow.width()
         });
+    }
+
+    function goToNextSlide() {
+        var next = (curr == count-1) ? 0 : curr+1;
+        goToSlide(next);
+    }
+
+    function goToPrevSlide() {
+        var prev = (curr == 0) ? count-1 : curr-1;
+        goToSlide(prev);
+    }
+
+    function goToSlide(slideIndex) {
+        curr = slideIndex;
+        updateHeader();
+    }
+
+
+    function handleClick(e) {
+
+        // Abort the default behavior of the clicked element
+        e.preventDefault();
+
+        // Cache a reference to the clicked element
+        var target = $(e.target);
+
+        // Branch based on what was clicked
+        if (target.hasClass('next')) {
+            goToNextSlide();
+        } else if (target.hasClass('prev')) {
+            goToPrevSlide();
+        }
+    }
+
+    function updateHeader() {
+        $('.x-of-y').html((curr+1) + ' of ' + count);
     }
 
 }
