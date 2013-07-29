@@ -109,4 +109,40 @@ ul.nav li {
     }
 }
 
+/* SLIDESHOWIFIED */
 
+.js .slideshowified {
+    position: relative;
+    overflow-x: hidden;
+}
+.js .slideshowified .x-of-y {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    line-height: 2.5em;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.js .slideshowified .controls {
+    background-color: black;
+    bottom: 0;
+    font-family: sans-serif;
+    height: 2.5em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.js .slideshowified .controls a {
+    color: white;
+    display: inline-block;
+    padding: .5em;
+    position: absolute;
+}
+.js .slideshowified .controls .next {
+    right: 0;
+}
+.js .slideshowified .controls .prev {
+    left: 0;
+}
