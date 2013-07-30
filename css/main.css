@@ -30,6 +30,7 @@ a:hover {
 }
 
 /* LAYOUT */
+
 * {
     box-sizing: border-box;
 }
@@ -66,29 +67,29 @@ ul.nav li {
     display: block;
 }
 
-/* JS SLIDESHOWS */
+/*  NO-FANCY SLIDESHOWS */
 
-.js .slideshow {
+.js .slideshow.no-fancy {
     -webkit-overflow-scrolling: touch;
     overflow-x: scroll;
 }
-.js .slideshow ul {
+.js .slideshow.no-fancy ul {
     -webkit-transform: translateZ(0px);
     margin: 0;
     padding: 0;
     white-space: nowrap;
 }
-.js .slideshow .slide {
+.js .slideshow.no-fancy .slide {
     border: 1px solid silver;
     display: inline-block;
     margin: 0 1em 2em 0;
     padding: 1em 1em 0 1em;
     width: 20em;
 }
-.js .slideshow .slide img {
+.js .slideshow.no-fancy .slide img {
     display: block;
 }
-.js .slideshow .slide p {
+.js .slideshow.no-fancy .slide p {
     white-space: normal;
 }
 @media screen and (min-width: 50em) {
@@ -106,13 +107,36 @@ ul.nav li {
     }
 }
 
-/* fancy */
+/* FANCY SLIDESHOWS */
 
-.js .fancy {
+.js .slideshow.fancy {
+    margin: auto 1em auto 0;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
-.js .fancy .x-of-y {
+.js .slideshow.fancy ul {
+    margin: 0;
+    padding: 2.5em 0;
+}
+.js .slideshow.fancy .slide {
+    display: none;
+}
+.js .slideshow.fancy .slide.active {
+    display: block;
+}
+.js .slideshow.fancy .slide p {
+    background-color: rgba(0,0,0,.5);
+    bottom: 1.5em;
+    color: white;
+    left: 0;
+    padding: 1em;
+    position: absolute;
+    width: 100%;
+}
+.js .slideshow.fancy .slide img {
+    display: block;
+}
+.js .slideshow.fancy .x-of-y {
     background-color: black;
     color: white;
     font-family: sans-serif;
@@ -122,7 +146,7 @@ ul.nav li {
     top: 0;
     width: 100%;
 }
-.js .fancy .controls {
+.js .slideshow.fancy .controls {
     background-color: black;
     bottom: 0;
     font-family: sans-serif;
@@ -131,16 +155,16 @@ ul.nav li {
     text-align: center;
     width: 100%;
 }
-.js .fancy .controls a {
+.js .slideshow.fancy .controls a {
     color: white;
     display: inline-block;
     padding: .5em;
     position: absolute;
 }
-.js .fancy .controls .next {
+.js .slideshow.fancy .controls .next {
     right: 0;
 }
-.js .fancy .controls .prev {
+.js .slideshow.fancy .controls .prev {
     left: 0;
 }
 @media screen and (min-width: 50em) {

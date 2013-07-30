@@ -31,6 +31,9 @@ if($) {
     // Init header
     updateHeader();
 
+    // Show first slide
+    goToSlide(0);
+
     // Recalc sizes on window resize
     $(window).on('resize', calcSizes); // Might want to debounce/throttle this
 
@@ -57,9 +60,11 @@ if($) {
 
     function goToSlide(slideIndex) {
         curr = slideIndex;
+        $('.slide.active').removeClass('active');
+        slides = $('.slide');
+        $(slides[curr]).addClass('active');
         updateHeader();
     }
-
 
     function handleClick(e) {
 
