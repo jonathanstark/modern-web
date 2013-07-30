@@ -116,10 +116,12 @@ ul.nav li {
 }
 .js .slideshow.fancy ul {
     margin: 0;
-    padding: 2.5em 0;
+    padding: 0;
 }
 .js .slideshow.fancy .slide {
+    background-color: black;
     display: none;
+    padding: 2.5em 0;
 }
 .js .slideshow.fancy .slide.active {
     display: block;
@@ -166,6 +168,13 @@ ul.nav li {
 }
 .js .slideshow.fancy .controls .prev {
     left: 0;
+}
+.js .slideshow.fancy .chrome {
+    -webkit-transition: opacity .5s linear;
+    opacity: 1;
+}
+.js .slideshow.fancy.hide-chrome .chrome {
+    opacity: 0;
 }
 @media screen and (min-width: 50em) {
     .js .slideshow.fancy {

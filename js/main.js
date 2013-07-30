@@ -22,8 +22,8 @@ if($) {
     slideshow.addClass('fancy');
 
     // Append some UI elements
-    slideshow.append('<div class="x-of-y">X of Y</div>');
-    slideshow.append('<div class="controls"><a href="#" class="prev">Prev</a><a href="#" class="next">Next</a></div>');
+    slideshow.append('<div class="chrome x-of-y">X of Y</div>');
+    slideshow.append('<div class="chrome controls"><a href="#" class="prev">Prev</a><a href="#" class="next">Next</a></div>');
 
     // Init sizes
     calcSizes();
@@ -79,7 +79,13 @@ if($) {
             goToNextSlide();
         } else if (target.hasClass('prev')) {
             goToPrevSlide();
+        } else {
+            toggleChrome();
         }
+    }
+
+    function toggleChrome() {
+        $('.slideshow').toggleClass('hide-chrome');
     }
 
     function updateHeader() {
