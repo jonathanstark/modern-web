@@ -125,6 +125,7 @@ ul.nav li {
     display: block;
     float: left;
     padding: 2.5em 0;
+    position: relative;
 }
 .js .slideshow.fancy .slide p {
     background-color: rgba(0,0,0,.5);
