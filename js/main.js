@@ -14,6 +14,10 @@ if($) {
     // Init some vars
     var curr = 0; // slides are zero indexed
     var count = slideshow.find('.slide').length;
+    var slideshow = $('.slideshow');
+    var strip = slideshow.find('ul');
+    var slides = slideshow.find('li');
+    var slideWidth = 0;
 
     // Remove css hook for no-fancy styles
     slideshow.removeClass('no-fancy');
@@ -31,9 +35,6 @@ if($) {
     // Init header
     updateHeader();
 
-    // Show first slide
-    goToSlide(0);
-
     // Recalc sizes on window resize
     $(window).on('resize', calcSizes); // Might want to debounce/throttle this
 
@@ -42,10 +43,11 @@ if($) {
 
     function calcSizes() {
         // Size the slides based on the parent width
-        var slideshow = $('.slideshow');
-        slideshow.find('.slide').css({
-            width: slideshow.width()
-        });
+        slideWidth = slideshow.width();
+        slides.css({width: slideWidth});
+        strip.css({width: (slideWidth * slides.length)});
+        // Realign slides offset with the viewable area
+        goToSlide(0);
     }
 
     function goToNextSlide() {
@@ -60,10 +62,11 @@ if($) {
 
     function goToSlide(slideIndex) {
         curr = slideIndex;
-        $('.slide.active').removeClass('active');
-        slides = $('.slide');
-        $(slides[curr]).addClass('active');
         updateHeader();
+        $(strip).css({
+            '-webkit-transition':'left 300ms ease-in-out',
+            'left':0-curr*slideWidth
+        });
     }
 
     function handleClick(e) {

@@ -118,14 +118,13 @@ ul.nav li {
 .js .slideshow.fancy ul {
     margin: 0;
     padding: 0;
+    position: relative;
 }
 .js .slideshow.fancy .slide {
     background-color: black;
-    display: none;
-    padding: 2.5em 0;
-}
-.js .slideshow.fancy .slide.active {
     display: block;
+    float: left;
+    padding: 2.5em 0;
 }
 .js .slideshow.fancy .slide p {
     background-color: rgba(0,0,0,.5);
@@ -184,4 +183,3 @@ ul.nav li {
         max-width: 24em;
     }
 }
-
