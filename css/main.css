@@ -4,6 +4,7 @@ body {
     font-family: Georgia, Times, serif;
     font-size: 100%;
     line-height: 1.5;
+    padding: 0 .5em;
 }
 .content > p:first-child {
     font-size: 150%;
@@ -110,7 +111,7 @@ ul.nav li {
 /* FANCY SLIDESHOWS */
 
 .js .slideshow.fancy {
-    margin: auto 1em auto 0;
+    margin: auto 0;
     position: relative;
     overflow: hidden;
 }
