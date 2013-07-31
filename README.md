@@ -1,3 +1,4 @@
-Modern Web Development with Progressive Enhancement, Responsive Design, and CSS3
+Modern Web Development
 ====
 
+Progressive Enhancement, Responsive Design, and CSS3
