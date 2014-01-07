@@ -14,7 +14,6 @@ if(Modernizr.opacity && Modernizr.csstransitions) {
     // Init some vars
     var curr = 0; // slides are zero indexed
     var count = slideshow.find('.slide').length;
-    var slideshow = $('.slideshow');
     var strip = slideshow.find('ul');
     var slides = slideshow.find('li');
     var slideWidth = 0;
